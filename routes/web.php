@@ -15,12 +15,10 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::view('/', 'app');
+Route::get('/', 'app');
 Route::view('/artikel', 'artikel');
 Route::view('/tags', 'tags');
 Route::view('/kategori', 'kategori');
 Route::view('/show', 'show');
-
-Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index']);

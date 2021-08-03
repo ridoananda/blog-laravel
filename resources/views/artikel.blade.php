@@ -1,9 +1,9 @@
-@extends('layout.app')
+@extends('layouts.app')
 @section('title', 'Blog - Rido ananda')
 
 @section('content')
 
-@include('layout.jumbotron')
+@include('layouts.jumbotron')
 
 <div class="container">
     <div class="row my-4">

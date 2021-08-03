@@ -1,9 +1,9 @@
-@extends('layout.app')
+@extends('layouts.app')
 @section('title', 'Tags')
 
 @section('content')
 
-@include('layout.jumbotron')
+@include('layouts.jumbotron')
 
 <div class="container">
     <div class="row py-5 justify-content-center">
