@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +15,17 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', 'app');
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/article/{article:slug}', [ArticleController::class, 'show']);
 Route::view('/artikel', 'artikel');
 Route::view('/tags', 'tags');
 Route::view('/kategori', 'kategori');
 Route::view('/show', 'show');
 
-Route::get('/home', [HomeController::class, 'index']);
+Route::prefix('admin')->name('admin.')->middleware('auth')->group(function() {
+	Route::get('article', [ArticleController::class, 'admin'])->name('article.admin');
+	Route::resource('article', ArticleController::class)->except([
+    'index'
+	]);
+	Route::view('home', 'admin.index');
+});
