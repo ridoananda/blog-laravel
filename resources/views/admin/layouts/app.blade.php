@@ -17,7 +17,9 @@
 
   <!-- Custom styles for this template-->
   <link href="{{ asset('admin/css/sb-admin-2.min.css') }}" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/easymde/dist/easymde.min.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/latest/styles/github.min.css">
 
 
 </head>
@@ -115,8 +117,9 @@
 
   <!-- Page level custom scripts -->
   <script src="{{ asset('admin/js/demo/datatables-demo.js') }}"></script>
-  <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+<script src="https://unpkg.com/easymde/dist/easymde.min.js"></script>
   <script src="{{ asset('admin/js/main.js') }}"></script>
+  <script src="https://cdn.jsdelivr.net/highlight.js/latest/highlight.min.js"></script>
 
 </body>
 

@@ -14,8 +14,8 @@
 	  <option value="3">Three</option>
 	</select>
   <div class="form-group mt-2">
-    <label for="text">Text</label>
-    <textarea class="form-control" id="text" rows="3" name="text">
+    <label for="texteditor">Text</label>
+    <textarea class="form-control" id="texteditor" rows="3" name="text">
     	{{ $article->text ?? old('title') }}
     </textarea>
   </div>
