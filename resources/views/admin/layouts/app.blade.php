@@ -17,7 +17,7 @@
 
   <!-- Custom styles for this template-->
   <link href="{{ asset('admin/css/sb-admin-2.min.css') }}" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/easymde/dist/easymde.min.css">
+  <link href="{{ asset('markdown/dist/codeparl-bootstrap-markdown-editor.min.css') }}" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/latest/styles/github.min.css">
 
@@ -117,9 +117,14 @@
 
   <!-- Page level custom scripts -->
   <script src="{{ asset('admin/js/demo/datatables-demo.js') }}"></script>
-<script src="https://unpkg.com/easymde/dist/easymde.min.js"></script>
-  <script src="{{ asset('admin/js/main.js') }}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.3/ace.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
   <script src="https://cdn.jsdelivr.net/highlight.js/latest/highlight.min.js"></script>
+
+  <script src="{{ asset('markdown/dist/codeparl-bootstrap-markdown-editor.min.js') }}"></script>
+  <script src="{{ asset('admin/js/main.js') }}"></script>
 
 </body>
 

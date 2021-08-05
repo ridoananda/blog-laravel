@@ -9,13 +9,21 @@ class Article extends Model
 {
     use HasFactory;
 
+    protected $guarded = ['id'];
+
     public function user()
     {
     	return $this->belongsTo(User::class);
+    }
+
+    public function tags()
+    {
+    	return $this->belongsToMany(Tag::class);
     }
 
     public function getImageAttribute()
     {
     	return $this->thumbnail;
     }
+
 }

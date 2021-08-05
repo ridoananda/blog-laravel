@@ -96,7 +96,7 @@ class ArticleController extends Controller
         return redirect()->back()->with('success', 'Article was deleted!');
     }
 
-    public function admin(Article $article)
+    public function index_admin(Article $article)
     {
         $articles = $article->all();
         return view('admin.article.index', compact('articles'));

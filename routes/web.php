@@ -23,7 +23,7 @@ Route::view('/kategori', 'kategori');
 Route::view('/show', 'show');
 
 Route::prefix('admin')->name('admin.')->middleware('auth')->group(function() {
-	Route::get('article', [ArticleController::class, 'admin'])->name('article.admin');
+	Route::get('article', [ArticleController::class, 'index_admin'])->name('article.admin');
 	Route::resource('article', ArticleController::class)->except([
     'index'
 	]);

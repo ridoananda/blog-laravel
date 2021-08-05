@@ -14,10 +14,10 @@
 	  <option value="3">Three</option>
 	</select>
   <div class="form-group mt-2">
-    <label for="texteditor">Text</label>
-    <textarea class="form-control" id="texteditor" rows="3" name="text">
-    	{{ $article->text ?? old('title') }}
-    </textarea>
+    <label for="text-editor">Text</label>
+    <div id="text-editor" contenteditable="true">
+      {{ $article->text ?? old('title') }}
+    </div>
   </div>
   <!-- <div class="form-group form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
