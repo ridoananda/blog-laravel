@@ -6,7 +6,7 @@
   <h1 class="h3 mb-0 text-gray-800">Create Article</h1>
 </div>
 <div class="row">
-  <div class="col-md-8">
+  <div class="col-md-10">
   	@include('components.error')
     <form method="post" action="{{ route('admin.article.store') }}" enctype="multipart/form-data">
   		@include('admin.article.form-control')
