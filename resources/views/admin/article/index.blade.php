@@ -37,6 +37,9 @@
             			<td>{{ \Str::words($article->text, 8) }}</td>
             			<td>{{ $article->created_at->format('d M Y') }}</td>
             			<td>
+            				<a href="{{ route('article.show', $article->slug) }}" class="badge badge-info">
+            					<i class="fas fa-eye"></i> Show
+            				</a>
             				<a href="{{ route('admin.article.edit', $article->id) }}" class="badge badge-success">
             					<i class="fas fa-pencil-alt"></i> Edit
             				</a>

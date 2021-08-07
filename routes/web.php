@@ -16,11 +16,10 @@ use App\Http\Controllers\ArticleController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/article/{article:slug}', [ArticleController::class, 'show']);
-Route::view('/artikel', 'artikel');
-Route::view('/tags', 'tags');
-Route::view('/kategori', 'kategori');
-Route::view('/show', 'show');
+Route::get('/article/{article:slug}', [ArticleController::class, 'show'])->name('article.show');
+Route::get('/artikel', [HomeController::class, 'index']);
+Route::get('/tags', [HomeController::class, 'index']);
+Route::get('/kategori', [HomeController::class, 'index']);
 
 Route::prefix('admin')->name('admin.')->middleware('auth')->group(function() {
 	Route::get('article', [ArticleController::class, 'index_admin'])->name('article.admin');

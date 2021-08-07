@@ -15,6 +15,11 @@ class Article extends Model
     {
     	return $this->belongsTo(User::class);
     }
+    
+    public function category()
+    {
+    	return $this->belongsTo(Category::class);
+    }
 
     public function tags()
     {
@@ -23,7 +28,7 @@ class Article extends Model
 
     public function getImageAttribute()
     {
-    	return $this->thumbnail;
+    	return '/'.$this->thumbnail;
     }
 
 }

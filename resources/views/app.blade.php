@@ -12,7 +12,7 @@
       <hr class="my3">
     </div>
   </div>
-  <div class="row pb-5">
+  <div class="row pb-3">
     @foreach ($articles as $article)
       <div class="col-md-6 col-lg-4">
         <a href="/article/{{ $article->slug }}" class="text-decoration-none text-dark">
@@ -35,7 +35,7 @@
               <div class="card-footer">
                 <div class="d-flex justify-content-between">
                   <small class="text-muted">{{ $article->created_at->diffForHumans() }}</small>
-                  <a href="/show" class="text-decoration-none text-primary small">Baca selengkapnya <iconify-icon data-icon="bi:arrow-right"></iconify-icon></a>
+                  <a href="/article/{{ $article->slug }}" class="text-decoration-none text-primary small">Baca selengkapnya <iconify-icon data-icon="bi:arrow-right"></iconify-icon></a>
                 </div>
               </div>
             </div>
@@ -44,17 +44,21 @@
       </div>
     @endforeach
   </div>
+  <div class="row pb-2">
+    <div class="col d-flex justify-content-center">
+      {{ $articles->links() }}
+    </div>
+  </div>
 
   <div class="row pb-5 justify-content-center">
       <div class="col-md-10">
           <h2>Tags</h2>
           <hr class="my3">
-          <a class="btn btn-light btn-outline-dark mr-1" href="/artikel" role="button">
-              <span class="iconify" data-icon="bi:tags" data-inline="false"></span> PHP
-          </a>
-          <a class="btn btn-light btn-outline-dark mr-1" href="/artikel" role="button">
-              <span class="iconify" data-icon="bi:tags" data-inline="false"></span> PHP
-          </a>
+          @foreach ($tags as $tag)
+            <a class="btn btn-light btn-outline-dark mr-1 mb-2" href="/tags/{{ $tag->slug }}" role="button">
+              <span class="iconify" data-icon="bi:tags" data-inline="false"></span> {{ $tag->name }}
+            </a>
+          @endforeach
       </div>
   </div>
 
@@ -62,12 +66,11 @@
       <div class="col-md-10">
           <h2>kategori</h2>
           <hr class="my3">
-          <a class="btn btn-light btn-outline-dark mr-1" href="/artikel" role="button">
-              <span class="iconify" data-icon="bi:folder2-open"></span> Laravel
-          </a>
-          <a class="btn btn-light btn-outline-dark mr-1" href="/artikel" role="button">
-              <span class="iconify" data-icon="bi:folder2-open"></span> Laravel
-          </a>
+          @foreach ($categories as $category)
+            <a class="btn btn-light btn-outline-dark mr-1 mb-2" href="/categories/{{ $category->slug }}" role="button">
+              <span class="iconify" data-icon="bi:folder2-open"></span> {{ $category->name }}
+            </a>
+          @endforeach
       </div>
   </div>
 </div>

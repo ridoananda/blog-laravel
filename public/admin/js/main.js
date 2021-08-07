@@ -5,10 +5,12 @@ $(function() {
     });
 	});
   var editor = editormd("text-editor", {
+    markdown: $("#append-test").text(),
     width: "100%",
     height: "600px",
     placeholder: 'Text article ...',
-    markdown: VALUE,
+    emoji: true,
+    toolbarAutoFixed: false,
     path : "/markdown-editor/lib/"  // Autoload modules mode, codemirror, marked... dependents libs path
   });
 });

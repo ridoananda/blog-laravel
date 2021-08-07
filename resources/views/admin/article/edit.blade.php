@@ -8,7 +8,8 @@
 <div class="row">
   <div class="col-md-10">
   	@include('components.error')
-    <form method="post" action="{{ route('admin.article.edit', $article->id) }}" enctype="multipart/form-data">
+    <form method="post" action="{{ route('admin.article.update', $article->id) }}" enctype="multipart/form-data">
+      @method('PUT')
   		@include('admin.article.form-control')
 		  <button type="submit" class="btn btn-primary">Edit!</button>
 		</form>

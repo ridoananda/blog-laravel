@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 use Laravel\Fortify\Fortify;
+use Illuminate\Pagination\Paginator;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -29,5 +30,6 @@ class AppServiceProvider extends ServiceProvider
       Fortify::loginView(function () {
         return view('auth.login');
       });
+      Paginator::useBootstrap();
     }
 }
