@@ -18,7 +18,11 @@ use App\Http\Controllers\ArticleController;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/migrate', function (Request $request) {
   Artisan::call('migrate');
-  return 'migrate';
+  return 'migrated!';
+});
+Route::get('/db-seed', function (Request $request) {
+  Artisan::call('db:seed');
+  return 'seeded!';
 });
 Route::get('/article/{article:slug}', [ArticleController::class, 'show'])->name('article.show');
 Route::get('/artikel', [HomeController::class, 'index']);
