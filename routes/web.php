@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\{Route, Artisan};
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ArticleController;
 
@@ -16,6 +16,10 @@ use App\Http\Controllers\ArticleController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/migrate', function (Request $request) {
+  Artisan::call('migrate');
+  return 'migrate';
+});
 Route::get('/article/{article:slug}', [ArticleController::class, 'show'])->name('article.show');
 Route::get('/artikel', [HomeController::class, 'index']);
 Route::get('/tags', [HomeController::class, 'index']);
