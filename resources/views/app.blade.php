@@ -18,7 +18,7 @@
         <a href="/article/{{ $article->slug }}" class="text-decoration-none text-dark">
           <div class="card mb-3">
             <div class="card">
-              <img src="/img/bandre.jpg" class="card-img-top">
+              <img src="{{ $article->image }}" class="card-img-top">
               <div class="card-body">
                   <h5 class="card-title">{{ \Str::words($article->title, 7) }}</h5>
                   <p class="card-text">
@@ -28,7 +28,7 @@
                   </div>
                   <div class="mr-2 align-items-center d-inline">
                       <span class="iconify" data-icon="bi:folder2-open"></span>
-                      <span class="mr-2">laravel</span>
+                      <span class="mr-2">{{ $article->category->name }}</span>
                   </div>
                   </p>
               </div>
@@ -49,8 +49,22 @@
       {{ $articles->links() }}
     </div>
   </div>
+  <div class="row">
+    <div class="col d-flex justify-content-center">
+      <script type="text/javascript">
+      	atOptions = {
+      		'key' : 'ac919b92abd59dfabaa4146ad2f7aa6a',
+      		'format' : 'iframe',
+      		'height' : 50,
+      		'width' : 320,
+      		'params' : {}
+      	};
+      	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.effectivedisplayformat.com/ac919b92abd59dfabaa4146ad2f7aa6a/invoke.js"></scr' + 'ipt>');
+      </script>
+    </div>
+  </div>
 
-  <div class="row pb-5 justify-content-center">
+  <div class="row mt-2 pb-4 justify-content-center">
       <div class="col-md-10">
           <h2>Tags</h2>
           <hr class="my3">
@@ -59,6 +73,16 @@
               <span class="iconify" data-icon="bi:tags" data-inline="false"></span> {{ $tag->name }}
             </a>
           @endforeach
+          <script type="text/javascript">
+          	atOptions = {
+          		'key' : 'ac919b92abd59dfabaa4146ad2f7aa6a',
+          		'format' : 'iframe',
+          		'height' : 50,
+          		'width' : 320,
+          		'params' : {}
+          	};
+          	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.effectivedisplayformat.com/ac919b92abd59dfabaa4146ad2f7aa6a/invoke.js"></scr' + 'ipt>');
+          </script>
       </div>
   </div>
 
@@ -71,6 +95,16 @@
               <span class="iconify" data-icon="bi:folder2-open"></span> {{ $category->name }}
             </a>
           @endforeach
+           <script type="text/javascript">
+          	atOptions = {
+          		'key' : 'ac919b92abd59dfabaa4146ad2f7aa6a',
+          		'format' : 'iframe',
+          		'height' : 50,
+          		'width' : 320,
+          		'params' : {}
+          	};
+          	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.effectivedisplayformat.com/ac919b92abd59dfabaa4146ad2f7aa6a/invoke.js"></scr' + 'ipt>');
+          </script>
       </div>
   </div>
 </div>

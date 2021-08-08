@@ -6,6 +6,16 @@
 <div class="container">
     <div class="row py-3 justify-content-center">
         <div class="col-md-10 col-lg-8">
+            <script type="text/javascript">
+            	atOptions = {
+            		'key' : 'ac919b92abd59dfabaa4146ad2f7aa6a',
+            		'format' : 'iframe',
+            		'height' : 50,
+            		'width' : 320,
+            		'params' : {}
+            	};
+            	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.effectivedisplayformat.com/ac919b92abd59dfabaa4146ad2f7aa6a/invoke.js"></scr' + 'ipt>');
+            </script>
             <h3>{{ $article->title }}</h3>
             <div class="mr-1 d-inline">
                 <span class="iconify" data-icon="bi:person"></span>
@@ -30,6 +40,16 @@
                     const text = `{{ $article->text }}`
                   </script>
                 </div>
+                 <script type="text/javascript">
+                    	atOptions = {
+                    		'key' : 'ac919b92abd59dfabaa4146ad2f7aa6a',
+                    		'format' : 'iframe',
+                    		'height' : 50,
+                    		'width' : 320,
+                    		'params' : {}
+                    	};
+                    	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.effectivedisplayformat.com/ac919b92abd59dfabaa4146ad2f7aa6a/invoke.js"></scr' + 'ipt>');
+                    </script>
                 @if($article->tags()->count() !== 0)
                   <h5>Tags </h5>
                   @foreach($article->tags as $tag)
@@ -39,8 +59,8 @@
                     </a>
                   @endforeach
                 @endif
-            </div>
-
+                
+              </div>
             <div class="row">
                 <div class="col">
                     <h2>0 Komentar</h2>
@@ -48,6 +68,9 @@
                     <div class="alert alert-info">
                       Upss.. Fitur komentar belum aktif :(
                     </div>
+                   
+                    <script async="async" data-cfasync="false" src="//pl16490460.highperformancecpm.com/3d0649ae4a78aadecdcead667e806426/invoke.js"></script>
+                      <div id="container-3d0649ae4a78aadecdcead667e806426"></div>
                     <!--<div class="row">-->
                     <!--    <div class="col">-->
                     <!--        <h4 class="mb-0">Rido ananda</h4>-->

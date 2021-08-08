@@ -42,16 +42,7 @@
     <script src="{{ asset('markdown-editor/lib/jquery.flowchart.min.js') }}"></script>
     <script src="{{ asset('markdown-editor/editormd.min.js') }}"></script>
     <script src="/js/main.js"></script>
-    <script type="text/javascript">
-  	atOptions = {
-  		'key' : '88c46e3ca6bc8a5c9e95fd8953bca4c3',
-  		'format' : 'iframe',
-  		'height' : 250,
-  		'width' : 300,
-  		'params' : {}
-  	};
-  	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.effectivedisplayformat.com/88c46e3ca6bc8a5c9e95fd8953bca4c3/invoke.js"></scr' + 'ipt>');
-  </script>
+    <script type='text/javascript' src='//pl16490485.highperformancecpm.com/ef/94/5c/ef945cf83af5af78b99265d12eeba355.js'></script>
 </body>
 
 </html>
