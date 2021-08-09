@@ -11,6 +11,9 @@ $(function() {
     placeholder: 'Text article ...',
     emoji: true,
     toolbarAutoFixed: false,
+    imageUpload: true,
+    imageFormats: ["jpg", "jpeg", "gif", "png"],
+    imageUploadURL: '/upload-image',
     path : "/markdown-editor/lib/"  // Autoload modules mode, codemirror, marked... dependents libs path
   });
 });

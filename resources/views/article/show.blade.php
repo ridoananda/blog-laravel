@@ -1,6 +1,8 @@
 @extends('layouts.app')
 @section('title', $article->title)
-
+@section('description', $article->text)
+@section('image', $article->image)
+@section('category', $article->category->name)
 @section('content')
 
 <div class="container">
@@ -25,7 +27,7 @@
                 <span class="iconify" data-icon="bi:folder2-open"></span>
                 <span class="mr-2">{{ $article->category->name }}</span>
             </div>
-            <div class="mr-2 align-items-center d-inline">
+            <div class="mr-2 align-items-center d-block">
                 <span class="iconify" data-icon="bi:calendar"></span>
                 <span class="mr-2">{{ $article->created_at->format('d F Y') }}</span>
             </div>
@@ -40,6 +42,7 @@
                     const text = `{{ $article->text }}`
                   </script>
                 </div>
+                <div id="SC_TBlock_857602"></div>
                  <script type="text/javascript">
                     	atOptions = {
                     		'key' : 'ac919b92abd59dfabaa4146ad2f7aa6a',
@@ -65,8 +68,8 @@
                 <div class="col">
                     <h2>0 Komentar</h2>
                     <hr class="my3">
-                    <div class="alert alert-info">
-                      Upss.. Fitur komentar belum aktif :(
+                    <div class="alert alert-warning">
+                      Upss.. Fitur komentar masih dalam pengembangan :)
                     </div>
                    
                     <script async="async" data-cfasync="false" src="//pl16490460.highperformancecpm.com/3d0649ae4a78aadecdcead667e806426/invoke.js"></script>

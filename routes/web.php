@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\{Route, Artisan};
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\{ArticleController, ImageController};
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +24,7 @@ Route::get('/db-seed', function (Request $request) {
   Artisan::call('db:seed');
   return 'seeded!';
 });
+Route::post('/upload-image', [ImageController::class, 'markdown'])->middleware('auth');
 Route::get('/article/{article:slug}', [ArticleController::class, 'show'])->name('article.show');
 Route::get('/artikel', [HomeController::class, 'index']);
 Route::get('/tags', [HomeController::class, 'index']);
