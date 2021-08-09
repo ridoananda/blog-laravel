@@ -4,8 +4,8 @@
 /public/img/thumbnail
 /public/img/article
 /storage/*.key
-#/vendor
-#.env
+/vendor
+.env
 .env.backup
 .phpunit.result.cache
 docker-compose.override.yml

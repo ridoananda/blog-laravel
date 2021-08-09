@@ -25,10 +25,10 @@
                 <div class="col-md-6">
                     <h3 class="mb-2">Get In Touch</h3>
                     <span>
-                        <a href="https://instagram.com/ridoanana3" class="text-light text-decoration-none">
+                        <a href="https://instagram.com/ridoananda3" class="text-light text-decoration-none">
                             <span class="iconify mr-2" data-icon="bi:instagram" data-inline="false" data-width="28"></span>
                         </a>
-                        <a href="https://wa.me/+6283802663822" class="text-light text-decoration-none">
+                        <a href="https://wa.me/+6281362102373" class="text-light text-decoration-none">
                             <span class="iconify" data-icon="bi:whatsapp" data-inline="false" data-width="28"></span>
                         </a>
                     </span>
