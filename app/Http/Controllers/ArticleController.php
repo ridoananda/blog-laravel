@@ -72,7 +72,6 @@ class ArticleController extends Controller
       $thumbnail = $article->thumbnail;
     }
     $attr['thumbnail'] = $thumbnail;
-    $attr['text'] = htmlentities($attr->text);
     $article->update($attr);
     $article->tags()->sync(request('tags'));
     
