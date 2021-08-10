@@ -29,7 +29,7 @@
     <div id="text-editor">
         <!-- Tips: Editor.md can auto append a `<textarea>` tag -->
         <textarea style="display:none;" name="text" rows="10">
-          {{ $article->text }}
+          {{ $article->text ?? old('text') }}
         </textarea>
     </div>
   </div>

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title', $article->title)
-@section('description', $article->text)
+@section('description', \Str::words($article->text, 16))
 @section('image', $article->image)
 @section('category', $article->category->name)
 @section('content')
@@ -38,9 +38,9 @@
 
             <div class="mt-2 mb-4">
                 <div id="preview-text" class="mb-3">
-                  <script>
-                    const text = `{{ $article->text }}`
-                  </script>
+                 <textarea id="append-test" style="display:none;" name="text" rows="10">
+          {{ $article->text }}
+        </textarea>
                 </div>
                 <div id="SC_TBlock_857602"></div>
                  <script type="text/javascript">

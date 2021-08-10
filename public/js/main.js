@@ -1,7 +1,8 @@
 $(function(){
-  const t = $("#append-test").text()
+  const t = $("#append-test").text().trim()
+  console.log(t)
   editormd.markdownToHTML('preview-text', {
-    markdown: text,
+    markdown: t,
     emoji           : true,
     taskList        : true,
     tex             : true,  // 默认不解析
