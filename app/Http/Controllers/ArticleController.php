@@ -80,6 +80,7 @@ class ArticleController extends Controller
 
   public function destroy(Article $article)
   {
+    \Storage::delete($article->thumbnail);
     $article->tags()->detach($article->tags);
     $article->delete('id', $article->id);
       return redirect()->back()->with('success', 'Article was deleted!');
