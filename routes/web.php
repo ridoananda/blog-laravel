@@ -25,10 +25,12 @@ Route::get('/db-seed', function (Request $request) {
   return 'seeded!';
 });
 Route::post('/upload-image', [ImageController::class, 'markdown'])->middleware('auth');
-Route::get('/article/{article:slug}', [ArticleController::class, 'show'])->name('article.show');
-Route::get('/artikel', [HomeController::class, 'index']);
-Route::get('/tags', [HomeController::class, 'index']);
-Route::get('/kategori', [HomeController::class, 'index']);
+Route::get('/artikel/{article:slug}', [ArticleController::class, 'show'])->name('article.show');
+Route::get('/artikel', [HomeController::class, 'article']);
+Route::get('/tags', [HomeController::class, 'tags']);
+Route::get('/tag/{tag:slug}', [HomeController::class, 'tag']);
+Route::get('/kategori', [HomeController::class, 'categories']);
+Route::get('/kategori/{category:slug}', [HomeController::class, 'category']);
 
 Route::prefix('admin')->name('admin.')->middleware('auth')->group(function() {
 	Route::get('article', [ArticleController::class, 'index_admin'])->name('article.admin');

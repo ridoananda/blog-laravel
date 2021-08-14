@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Models\Article;
 
-class ArticleFactory extends Factory
+class CategoryFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Article::class;
+    protected $model = Category::class;
 
     /**
      * Define the model's default state.
@@ -21,14 +21,10 @@ class ArticleFactory extends Factory
      */
     public function definition()
     {
-        $title = $this->faker->sentence(10);
+        $title = $this->faker->sentence(1);
         return [
-            'user_id' => 1,
-            'category_id' => rand(1,10),
-            'title' => $title,
+            'name' => $title,
             'slug' => \Str::slug($title),
-            'thumbnail' => 'img/bandre.jpg',
-            'text' => $this->faker->paragraph(15)
         ];
     }
 }

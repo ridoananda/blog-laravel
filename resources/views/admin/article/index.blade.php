@@ -32,8 +32,10 @@
             	@foreach ($articles as $article)
             		<tr>
             			<td>{{ $article->title }}</td>
-            			<td>{{ $article->category_id }}</td>
-            			<td>{{ $article->image }}</td>
+            			<td>{{ $article->category->name }}</td>
+            			<td>
+                    <img src="{{ $article->image }}" width="70" height="70" class="rounded">   
+                  </td>
             			<td>{{ \Str::words($article->text, 8) }}</td>
             			<td>{{ $article->created_at->format('d M Y') }}</td>
             			<td>

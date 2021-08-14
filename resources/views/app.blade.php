@@ -69,7 +69,7 @@
           <h2>Tags</h2>
           <hr class="my3">
           @foreach ($tags as $tag)
-            <a class="btn btn-light btn-outline-dark mr-1 mb-2" href="/tags/{{ $tag->slug }}" role="button">
+            <a class="btn btn-light btn-outline-dark mr-1 mb-2" href="/tag/{{ $tag->slug }}" role="button">
               <span class="iconify" data-icon="bi:tags" data-inline="false"></span> {{ $tag->name }}
             </a>
           @endforeach

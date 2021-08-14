@@ -88,7 +88,7 @@ class ArticleController extends Controller
 
   public function index_admin(Article $article)
   {
-      $articles = $article->all();
+      $articles = $article->with('category')->get();
       return view('admin.article.index', compact('articles'));
   }
 }
