@@ -14,7 +14,7 @@ class ImageController extends Controller
     $image = request()->file('editormd-image-file');
     return response()->json([
       'success' => 1,
-      'url' => $image->storeAs('/img/article', $image->getClientOriginalName())
+      'url' => $image->store('/img/article')
     ]);
   }
 }
