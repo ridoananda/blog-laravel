@@ -15,7 +15,7 @@
   <div class="row pb-3">
     @foreach ($articles as $article)
       <div class="col-md-6 col-lg-4">
-        <a href="/article/{{ $article->slug }}" class="text-decoration-none text-dark">
+        <a href="{{ route('article.show', $article->slug) }}" class="text-decoration-none text-dark">
           <div class="card mb-3">
             <div class="card">
               <img src="{{ $article->image }}" class="card-img-top">
@@ -69,7 +69,7 @@
           <h2>Tags</h2>
           <hr class="my3">
           @foreach ($tags as $tag)
-            <a class="btn btn-light btn-outline-dark mr-1 mb-2" href="/tag/{{ $tag->slug }}" role="button">
+            <a class="btn btn-light btn-outline-dark mr-1 mb-2" href="{{ route('tag.show', $tag->slug) }}" role="button">
               <span class="iconify" data-icon="bi:tags" data-inline="false"></span> {{ $tag->name }}
             </a>
           @endforeach
@@ -91,7 +91,7 @@
           <h2>kategori</h2>
           <hr class="my3">
           @foreach ($categories as $category)
-            <a class="btn btn-light btn-outline-dark mr-1 mb-2" href="/categories/{{ $category->slug }}" role="button">
+            <a class="btn btn-light btn-outline-dark mr-1 mb-2" href="{{ route('category.show', $category->slug) }}" role="button">
               <span class="iconify" data-icon="bi:folder2-open"></span> {{ $category->name }}
             </a>
           @endforeach

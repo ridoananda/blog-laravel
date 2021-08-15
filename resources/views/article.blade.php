@@ -21,7 +21,7 @@
   <div class="row pb-3">
     @foreach ($articles as $article)
       <div class="col-md-6 col-lg-4">
-        <a href="/article/{{ $article->slug }}" class="text-decoration-none text-dark">
+        <a href="{{ route('article.show', $article->slug) }}" class="text-decoration-none text-dark">
           <div class="card mb-3">
             <div class="card">
               <img src="{{ $article->image }}" class="card-img-top">
@@ -41,7 +41,7 @@
               <div class="card-footer">
                 <div class="d-flex justify-content-between">
                   <small class="text-muted">{{ $article->created_at->diffForHumans() }}</small>
-                  <a href="/artikel/{{ $article->slug }}" class="text-decoration-none text-primary small">Baca selengkapnya <iconify-icon data-icon="bi:arrow-right"></iconify-icon></a>
+                  <a href="{{ route('article.show', $article->slug) }}" class="text-decoration-none text-primary small">Baca selengkapnya <iconify-icon data-icon="bi:arrow-right"></iconify-icon></a>
                 </div>
               </div>
             </div>

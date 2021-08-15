@@ -9,11 +9,11 @@
                 <li class="nav-item{{ request()->is('/') ? ' active': '' }}">
                     <a class="nav-link" href="/">Home</a>
                 </li>
-                <li class="nav-item{{ request()->is('artikel') ? ' active': '' }}">
-                    <a class="nav-link" href="/artikel">Artikel</a>
+                <li class="nav-item{{ request()->is('articles') ? ' active': '' }}">
+                    <a class="nav-link" href="{{ route('articles') }}">Artikel</a>
                 </li>
-                <li class="nav-item{{ request()->is('kategori') ? ' active': '' }}">
-                    <a class="nav-link" href="/kategori">Kategori</a>
+                <li class="nav-item{{ request()->is('categories') ? ' active': '' }}">
+                    <a class="nav-link" href="{{ route('categories') }}">Kategori</a>
                 </li>
                 <li class="nav-item{{ request()->is('tags') ? ' active': '' }}">
                     <a class="nav-link" href="/tags">Tags</a>

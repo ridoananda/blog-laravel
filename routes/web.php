@@ -25,12 +25,12 @@ Route::get('/db-seed', function (Request $request) {
   return 'seeded!';
 });
 Route::post('/upload-image', [ImageController::class, 'markdown'])->middleware('auth');
-Route::get('/artikel/{article:slug}', [ArticleController::class, 'show'])->name('article.show');
-Route::get('/artikel', [HomeController::class, 'article']);
+Route::get('/article/{article:slug}', [ArticleController::class, 'show'])->name('article.show');
+Route::get('/articles', [HomeController::class, 'article'])->name('articles');
 Route::get('/tags', [HomeController::class, 'tags']);
-Route::get('/tag/{tag:slug}', [HomeController::class, 'tag']);
-Route::get('/kategori', [HomeController::class, 'categories']);
-Route::get('/kategori/{category:slug}', [HomeController::class, 'category']);
+Route::get('/tag/{tag:slug}', [HomeController::class, 'tag'])->name('tag.show');
+Route::get('/categories', [HomeController::class, 'categories'])->name('categories');
+Route::get('/category/{category:slug}', [HomeController::class, 'category'])->name('category.show');
 
 Route::prefix('admin')->name('admin.')->middleware('auth')->group(function() {
 	Route::get('article', [ArticleController::class, 'index_admin'])->name('article.admin');

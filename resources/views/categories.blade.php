@@ -21,7 +21,7 @@
             </div>
             <hr class="my3">
             @foreach ($categories as $category)
-                <a class="btn btn-light btn-outline-dark mr-1 mb-2" href="/kategori/{{ $category->slug }}" role="button">
+                <a class="btn btn-light btn-outline-dark mr-1 mb-2" href="{{ route('category.show', $category->slug) }}" role="button">
                     <span class="iconify" data-icon="bi:folder2-open"></span> {{ $category->name }}
                 </a>
             @endforeach
