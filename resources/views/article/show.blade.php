@@ -25,7 +25,7 @@
             </div>
             <div class="mr-2 align-items-center d-inline">
                 <span class="iconify" data-icon="bi:folder2-open"></span>
-                <span onclick="window.location.href='{{$article->category->slug}}'" class="mr-2">{{ $article->category->name }}</span>
+                <span onclick="window.location.href='{{ route('category.show', $article->category->slug) }}'" class="mr-2">{{ $article->category->name }}</span>
             </div>
             <div class="mr-2 align-items-center d-block">
                 <span class="iconify" data-icon="bi:calendar"></span>
