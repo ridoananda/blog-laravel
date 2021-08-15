@@ -25,7 +25,7 @@
             </div>
             <div class="mr-2 align-items-center d-inline">
                 <span class="iconify" data-icon="bi:folder2-open"></span>
-                <span class="mr-2">{{ $article->category->name }}</span>
+                <span onclick="window.location.href='{{$article->category->slug}}'" class="mr-2">{{ $article->category->name }}</span>
             </div>
             <div class="mr-2 align-items-center d-block">
                 <span class="iconify" data-icon="bi:calendar"></span>
@@ -56,7 +56,7 @@
                 @if($article->tags()->count() !== 0)
                   <h5>Tags </h5>
                   @foreach($article->tags as $tag)
-                    <a class="btn btn-light btn-outline-dark mr-1 mb-1 btn-sm" href="/artikel/tags" role="button">
+                    <a class="btn btn-light btn-outline-dark mr-1 mb-1 btn-sm" href="/tag/{{ $tag->slug }}" role="button">
                         <span class="iconify" data-icon="bi:tags" data-inline="false"></span> 
                         {{ $tag->name }}
                     </a>
